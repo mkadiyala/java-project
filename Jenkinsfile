@@ -42,6 +42,7 @@ pipeline {
       }
       steps {
         sh "wget http//192.168.0.50/rectangle/green/rectangle_${env.BUILD_NUMBER}.jar"
+        sh "chmod 755 *"
         sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 4 5"
       }
     }
